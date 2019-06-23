@@ -1,0 +1,33 @@
+{% extends 'home/base.html' %}
+{% block content %}
+  <form class="" action="{% url 'accounts:register' %}" method="post">
+     {% csrf_token %}
+   <div class="form-group center" >
+     <div class="row">
+       <div class="col-sm-3">
+         <label >Email</label>
+         <input type="text" class="form-control" name="Email" placeholder="Email" type="email">
+         <label >UserName</label>
+         <input type="text" class="form-control" name="UserName" placeholder="UserName" maxlength="20">
+         <label >Image</label>
+         <input type="image" class="form-control" name="Image" >
+         <label >Password</label>
+         <input type="text" class="form-control" name="Password" placeholder="Password" type="password">
+         <label >Reenter Password</label>
+         <input type="text" class="form-control" name="Reenter password" placeholder="Reenter Password" type="password">
+         <br>
+         <button type="submit" >submit</button>
+       </div>
+        <div class="col-sm-9">
+
+        </div>
+     </div>
+   </div>
+   </form>
+    <div>
+       {% for message in messages %}
+       
+           {{message}}
+       {% endfor %}    
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %} 
+     
+ <div class="container-fluid center">
+  <div class="col-sm-5 col-md-offset-1">
+       <div class="form-group" >
+	       <form method="POST">
+	          <h2>Are you sure ,you want to delete product {{product.description }}</h2>
+	           {% csrf_token %}
+	       <button type="submit" class="btn btn-primary" value="submit"> submit</button>
+	       </form>
+       </div>
+   </div>
+</div> 
+  
+{% endblock %}

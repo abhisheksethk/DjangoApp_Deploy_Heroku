@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{%url 'home:home'  %}">DjangoProject</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{%url 'home:home'  %}">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Users<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{%url 'accounts:userList' %}">Account list</a></li>
+          <li><a href="#">update</a></li>
+          <li><a href="#">delete</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+           <li><a href="{%url 'crudapp:create' %}">create</a></li>
+           <li><a href="{%url 'crudapp:list' %}">list</a></li>
+        </ul>
+      </li>
+      <li><a href="{%url 'authapp:register' %}"><span class="glyphicon glyphicon-user"></span>AuthRegister</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="{%url 'admin:index' %}"><span class="glyphicon glyphicon-user"></span>Admin</a></li>
+      <li><a href="{%url 'accounts:register' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="{%url 'accounts:login'  %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+       <li><a href="{%url 'accounts:logout'  %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+    
+  </div>
+</nav>

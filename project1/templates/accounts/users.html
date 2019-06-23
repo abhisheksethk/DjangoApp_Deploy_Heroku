@@ -1,0 +1,8 @@
+{% extends 'home/base.html' %}
+{% block content %}
+{{context}}
+    {%for x in users%}
+      <p>{{x.user}}</p><p>{{x.id}}</p>
+      <a href="{% url 'accounts:update' x.id %}">update</a>
+    {%endfor%}
+{% endblock %}
